@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#334b91">
+    <title>Admin Main | CVer</title>
+    <link rel="stylesheet" href="../assets/main.css">
+    <link rel="stylesheet" href="../assets/admain.css">
+    <script src="../assets/main.js" defer></script>
+</head>
+<body>
+    <div class="main-app">
+        <header class="main-navbar">
+            <div class="main-navbar-start">
+                <button class="main-icon-button main-menu-toggle" id="sidebar-toggle" type="button"
+                        aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-sidebar">
+                    <span class="main-hamburger" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <a class="main-brand" href="admain.html">
+                    <span class="main-brand-mark" aria-hidden="true">C</span>
+                    <span>CVer</span>
+                </a>
+            </div>
+
+            <a class="main-navbar-title" href="admain.html">Admin workspace</a>
+
+            <div class="main-user-controls">
+                <details class="main-quick-menu" id="quick-menu">
+                    <summary class="main-icon-button main-gear-toggle" aria-label="Open quick options">
+                        <img class="main-gear-icon" src="../assets/imgs/gear.webp" alt="" aria-hidden="true">
+                    </summary>
+                    <div class="main-quick-menu-panel">
+                        <a class="main-quick-menu-link" href="login.html">Log out</a>
+                        <a class="main-quick-menu-link" href="profile.html#profile-settings">Profile options</a>
+                        <details class="main-status-picker">
+                            <summary class="main-status-heading">Set status</summary>
+                            <div class="main-status-choices" role="group" aria-label="Choose your status">
+                                <button class="main-status-choice" type="button" data-status-choice="available"
+                                        aria-pressed="true">
+                                    <span class="main-status-swatch status-green" aria-hidden="true"></span>
+                                    Available
+                                </button>
+                                <button class="main-status-choice" type="button" data-status-choice="away"
+                                        aria-pressed="false">
+                                    <span class="main-status-swatch status-yellow" aria-hidden="true"></span>
+                                    Away
+                                </button>
+                                <button class="main-status-choice" type="button" data-status-choice="busy"
+                                        aria-pressed="false">
+                                    <span class="main-status-swatch status-red" aria-hidden="true"></span>
+                                    Busy
+                                </button>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+
+                <a class="main-profile-link" href="profile.html" aria-label="Open your profile">
+                    <img class="main-profile-avatar" src="../assets/imgs/Home.jpg" alt="Profile picture">
+                    <span class="main-user-status status-green" id="user-status" aria-label="Status: Available"></span>
+                </a>
+            </div>
+        </header>
+
+        <button class="main-sidebar-backdrop" id="sidebar-backdrop" type="button"
+                aria-label="Close navigation menu" hidden></button>
+
+        <aside class="main-sidebar" id="main-sidebar" aria-label="Main navigation" aria-hidden="true" inert>
+            <div class="main-sidebar-heading">
+                <span>Explore</span>
+                <span class="main-sidebar-caption">Administrator workspace</span>
+            </div>
+            <nav class="main-sidebar-nav">
+                <a class="main-sidebar-link" href="profile.html#profile-settings">
+                    <span class="main-nav-icon" aria-hidden="true">⚙</span>
+                    <span>Settings</span>
+                </a>
+                <a class="main-sidebar-link" href="friends.html">
+                    <span class="main-nav-icon" aria-hidden="true">ツ</span>
+                    <span>Friends List</span>
+                </a>
+                <a class="main-sidebar-link" href="#cv-templates">
+                    <span class="main-nav-icon" aria-hidden="true">▤</span>
+                    <span>CV Templates</span>
+                </a>
+                <a class="main-sidebar-link" href="#faq">
+                    <span class="main-nav-icon" aria-hidden="true">?!</span>
+                    <span>FAQ</span>
+                </a>
+                <a class="main-sidebar-link" href="#contact-us">
+                    <span class="main-nav-icon" aria-hidden="true">✉</span>
+                    <span>Contact Us</span>
+                </a>
+                <div class="main-sidebar-caption main-admin-nav-heading">Admin tools</div>
+                <a class="main-sidebar-link" href="#admin-users">
+                    <span class="main-nav-icon" aria-hidden="true">:o</span>
+                    <span>User management</span>
+                </a>
+                <a class="main-sidebar-link" href="#admin-moderation">
+                    <span class="main-nav-icon" aria-hidden="true">✓</span>
+                    <span>Content moderation</span>
+                </a>
+                <a class="main-sidebar-link" href="#admin-database">
+                    <span class="main-nav-icon" aria-hidden="true">▦</span>
+                    <span>Database access</span>
+                </a>
+                <a class="main-sidebar-link" href="#admin-reports">
+                    <span class="main-nav-icon" aria-hidden="true">▥</span>
+                    <span>Reports</span>
+                </a>
+            </nav>
+            <div class="main-sidebar-footer">Admin tools are UI placeholders and require authorized backend services.</div>
+        </aside>
+
+        <main class="main-content">
+            <section class="main-welcome-card" aria-labelledby="welcome-title">
+                <div class="main-welcome-copy">
+                    <p class="main-eyebrow">Your next chapter starts here</p>
+                    <h1 id="welcome-title">Welcome to your admin workspace.</h1>
+                    <p>Manage the CV Maker community and keep shared content in good shape.</p>
+                    <a class="main-primary-link" href="#cv-templates">Explore CV templates</a>
+                </div>
+                <div class="main-welcome-art" aria-hidden="true">
+                    <div class="main-art-sheet">
+                        <span class="main-art-avatar"></span>
+                        <span class="main-art-line main-art-line-wide"></span>
+                        <span class="main-art-line"></span>
+                        <span class="main-art-divider"></span>
+                        <span class="main-art-line main-art-line-wide"></span>
+                        <span class="main-art-line"></span>
+                        <span class="main-art-line main-art-line-short"></span>
+                    </div>
+                    <span class="main-art-spark main-art-spark-one"></span>
+                    <span class="main-art-spark main-art-spark-two"></span>
+                </div>
+            </section>
+
+            <section class="main-placeholder-card" id="cv-templates" aria-labelledby="templates-title">
+                <div class="main-section-icon" aria-hidden="true">▤</div>
+                <div>
+                    <h2 id="templates-title">CV Templates</h2>
+                    <p>Your template collection will appear here.</p>
+                </div>
+            </section>
+
+            <section class="main-community" id="cv-posts" aria-labelledby="community-title">
+                <div class="main-community-heading">
+                    <div>
+                        <p class="main-eyebrow">From the community</p>
+                        <h2 id="community-title">CV posts</h2>
+                        <p>Discover CVs shared by other creators.</p>
+                    </div>
+                    <span class="main-community-note">Sample posts · reactions are page-only demos</span>
+                </div>
+
+                <article class="main-post-card" data-post-card>
+                    <header class="main-post-header">
+                        <div class="main-post-avatar main-post-avatar-blue" aria-hidden="true">JM</div>
+                        <div class="main-post-author">
+                            <h3>Jordan Miller</h3>
+                            <p>@jordanmiller <span aria-hidden="true">·</span> 2 hours ago</p>
+                        </div>
+                        <span class="main-post-type">UX Designer CV</span>
+                    </header>
+                    <div class="main-post-preview">
+                        <div class="main-post-preview-top">
+                            <span class="main-post-preview-name">JORDAN MILLER</span>
+                            <span class="main-post-preview-role">PRODUCT DESIGNER</span>
+                        </div>
+                        <div class="main-post-preview-body">
+                            <div class="main-post-preview-column">
+                                <span class="main-post-preview-heading">PROFILE</span>
+                                <span class="main-post-preview-line"></span>
+                                <span class="main-post-preview-line"></span>
+                                <span class="main-post-preview-line short"></span>
+                                <span class="main-post-preview-heading">EXPERIENCE</span>
+                                <span class="main-post-preview-line"></span>
+                                <span class="main-post-preview-line short"></span>
+                            </div>
+                            <div class="main-post-preview-column">
+                                <span class="main-post-preview-heading">SELECTED WORK</span>
+                                <span class="main-post-preview-block"></span>
+                                <span class="main-post-preview-heading">SKILLS</span>
+                                <span class="main-post-preview-tags">RESEARCH · FIGMA · UI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="main-post-caption">A clean, editorial layout focused on product design and measurable impact.</p>
+                    <div class="main-post-actions" aria-label="Post interactions">
+                        <button class="main-post-action" type="button" data-post-action="like"
+                                aria-pressed="false" aria-label="Like Jordan's CV">
+                            <span class="main-post-action-icon" aria-hidden="true">♥</span>
+                            <span data-post-count="likes">128</span>
+                            <span class="main-post-action-label">Likes</span>
+                        </button>
+                        <button class="main-post-action" type="button" data-post-action="dislike"
+                                aria-pressed="false" aria-label="Dislike Jordan's CV">
+                            <span class="main-post-action-icon" aria-hidden="true">▾</span>
+                            <span data-post-count="dislikes">3</span>
+                            <span class="main-post-action-label">Dislikes</span>
+                        </button>
+                        <button class="main-post-action" type="button" data-open-comments
+                                data-comment-template="jordan-comments" data-comment-count="3"
+                                aria-controls="comments-drawer" aria-expanded="false"
+                                aria-label="Show 3 comments on Jordan's CV">
+                            <span class="main-post-action-icon" aria-hidden="true">▢</span>
+                            <span data-post-count="comments">3</span>
+                            <span class="main-post-action-label">Comments</span>
+                        </button>
+                        <button class="main-post-action" type="button" data-post-action="download"
+                                aria-label="Download Jordan's sample CV">
+                            <span class="main-post-action-icon" aria-hidden="true">↓</span>
+                            <span data-post-count="downloads">46</span>
+                            <span class="main-post-action-label">Downloads</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="main-post-card" data-post-card>
+                    <header class="main-post-header">
+                        <div class="main-post-avatar main-post-avatar-gold" aria-hidden="true">AK</div>
+                        <div class="main-post-author">
+                            <h3>Amara Khan</h3>
+                            <p>@amarakhan <span aria-hidden="true">·</span> yesterday</p>
+                        </div>
+                        <span class="main-post-type">Marketing CV</span>
+                    </header>
+                    <div class="main-post-preview main-post-preview-warm">
+                        <div class="main-post-preview-top">
+                            <span class="main-post-preview-name">AMARA KHAN</span>
+                            <span class="main-post-preview-role">BRAND STRATEGIST</span>
+                        </div>
+                        <div class="main-post-preview-body">
+                            <div class="main-post-preview-column">
+                                <span class="main-post-preview-heading">ABOUT</span>
+                                <span class="main-post-preview-line"></span>
+                                <span class="main-post-preview-line short"></span>
+                                <span class="main-post-preview-heading">CAREER</span>
+                                <span class="main-post-preview-line"></span>
+                                <span class="main-post-preview-line"></span>
+                            </div>
+                            <div class="main-post-preview-column">
+                                <span class="main-post-preview-heading">HIGHLIGHTS</span>
+                                <span class="main-post-preview-block"></span>
+                                <span class="main-post-preview-heading">EXPERTISE</span>
+                                <span class="main-post-preview-tags">STRATEGY · CONTENT · SEO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="main-post-caption">Sharing my latest CV refresh: warm colors, concise experience, and campaign results up front.</p>
+                    <div class="main-post-actions" aria-label="Post interactions">
+                        <button class="main-post-action" type="button" data-post-action="like"
+                                aria-pressed="false" aria-label="Like Amara's CV">
+                            <span class="main-post-action-icon" aria-hidden="true">♥</span>
+                            <span data-post-count="likes">94</span>
+                            <span class="main-post-action-label">Likes</span>
+                        </button>
+                        <button class="main-post-action" type="button" data-post-action="dislike"
+                                aria-pressed="false" aria-label="Dislike Amara's CV">
+                            <span class="main-post-action-icon" aria-hidden="true">▾</span>
+                            <span data-post-count="dislikes">1</span>
+                            <span class="main-post-action-label">Dislikes</span>
+                        </button>
+                        <button class="main-post-action" type="button" data-open-comments
+                                data-comment-template="amara-comments" data-comment-count="3"
+                                aria-controls="comments-drawer" aria-expanded="false"
+                                aria-label="Show 3 comments on Amara's CV">
+                            <span class="main-post-action-icon" aria-hidden="true">▢</span>
+                            <span data-post-count="comments">3</span>
+                            <span class="main-post-action-label">Comments</span>
+                        </button>
+                        <button class="main-post-action" type="button" data-post-action="download"
+                                aria-label="Download Amara's sample CV">
+                            <span class="main-post-action-icon" aria-hidden="true">↓</span>
+                            <span data-post-count="downloads">31</span>
+                            <span class="main-post-action-label">Downloads</span>
+                        </button>
+                    </div>
+                </article>
+            </section>
+
+            <section class="main-admin-tools" aria-labelledby="admin-tools-title">
+                <div class="main-community-heading">
+                    <div>
+                        <p class="main-eyebrow">Administrator workspace</p>
+                        <h2 id="admin-tools-title">Admin tools</h2>
+                        <p>Management destinations are placeholders until connected to authorized services.</p>
+                    </div>
+                </div>
+                <div class="main-admin-grid">
+                    <section class="main-placeholder-card" id="admin-users" aria-labelledby="admin-users-title">
+                        <div class="main-section-icon" aria-hidden="true">:o</div>
+                        <div>
+                            <h2 id="admin-users-title">User management</h2>
+                            <p>User administration tools will appear here.</p>
+                        </div>
+                    </section>
+                    <section class="main-placeholder-card" id="admin-moderation" aria-labelledby="admin-moderation-title">
+                        <div class="main-section-icon" aria-hidden="true">✓</div>
+                        <div>
+                            <h2 id="admin-moderation-title">Content moderation</h2>
+                            <p>Community review and moderation tools will appear here.</p>
+                        </div>
+                    </section>
+                    <section class="main-placeholder-card" id="admin-database" aria-labelledby="admin-database-title">
+                        <div class="main-section-icon" aria-hidden="true">▦</div>
+                        <div>
+                            <h2 id="admin-database-title">Database access</h2>
+                            <p>Database operations are not connected to this page. Access must be provided through authorized backend services.</p>
+                        </div>
+                    </section>
+                    <section class="main-placeholder-card" id="admin-reports" aria-labelledby="admin-reports-title">
+                        <div class="main-section-icon" aria-hidden="true">▥</div>
+                        <div>
+                            <h2 id="admin-reports-title">Reports</h2>
+                            <p>Community and usage reports will appear here.</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <div class="main-secondary-grid">
+                <section class="main-placeholder-card" id="faq" aria-labelledby="faq-title">
+                    <div class="main-section-icon" aria-hidden="true">?</div>
+                    <div>
+                        <h2 id="faq-title">Frequently asked questions</h2>
+                        <p>Helpful answers will be added here.</p>
+                    </div>
+                </section>
+                <section class="main-placeholder-card" id="contact-us" aria-labelledby="contact-title">
+                    <div class="main-section-icon" aria-hidden="true">✉</div>
+                    <div>
+                        <h2 id="contact-title">Contact Us</h2>
+                        <p>Contact information will be available here.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <button class="main-comments-backdrop" id="comments-backdrop" type="button"
+                aria-label="Close comments" tabindex="-1" hidden></button>
+        <aside class="main-comments-drawer" id="comments-drawer" role="dialog" aria-modal="true"
+               aria-labelledby="comments-drawer-title" aria-hidden="true" inert>
+            <header class="main-comments-header">
+                <div>
+                    <p class="main-comments-eyebrow">Community conversation</p>
+                    <h2 id="comments-drawer-title">CV comments</h2>
+                    <p class="main-comments-post-title" id="comments-post-title"></p>
+                </div>
+                <button class="main-comments-close" id="comments-close" type="button"
+                        aria-label="Close comments">&times;</button>
+            </header>
+            <div class="main-comments-list" id="comments-list" aria-live="polite"></div>
+            <p class="main-comments-footer">Showing all sample comments for this CV.</p>
+        </aside>
+
+        <template id="jordan-comments">
+            <article class="main-comment">
+                <div class="main-comment-avatar main-comment-avatar-lilac" aria-hidden="true">SL</div>
+                <div class="main-comment-content">
+                    <p><strong>Sam Lee</strong><span>2 hours ago</span></p>
+                    <p>Love the clear project summaries. It is easy to see the impact of each case study!</p>
+                </div>
+            </article>
+            <article class="main-comment">
+                <div class="main-comment-avatar main-comment-avatar-mint" aria-hidden="true">TR</div>
+                <div class="main-comment-content">
+                    <p><strong>Taylor Reed</strong><span>1 hour ago</span></p>
+                    <p>Great use of whitespace. The hierarchy makes the experience section really easy to scan.</p>
+                </div>
+            </article>
+            <article class="main-comment">
+                <div class="main-comment-avatar main-comment-avatar-peach" aria-hidden="true">DC</div>
+                <div class="main-comment-content">
+                    <p><strong>Devon Carter</strong><span>35 minutes ago</span></p>
+                    <p>The selected work section is a smart touch for a product design CV.</p>
+                </div>
+            </article>
+        </template>
+
+        <template id="amara-comments">
+            <article class="main-comment">
+                <div class="main-comment-avatar main-comment-avatar-mint" aria-hidden="true">RC</div>
+                <div class="main-comment-content">
+                    <p><strong>Riley Chen</strong><span>yesterday</span></p>
+                    <p>The results-first format is excellent. Those metrics really stand out.</p>
+                </div>
+            </article>
+            <article class="main-comment">
+                <div class="main-comment-avatar main-comment-avatar-lilac" aria-hidden="true">DP</div>
+                <div class="main-comment-content">
+                    <p><strong>Dev Patel</strong><span>yesterday</span></p>
+                    <p>Saving this color palette! It feels warm and professional at the same time.</p>
+                </div>
+            </article>
+            <article class="main-comment">
+                <div class="main-comment-avatar main-comment-avatar-peach" aria-hidden="true">MS</div>
+                <div class="main-comment-content">
+                    <p><strong>Morgan Shaw</strong><span>18 hours ago</span></p>
+                    <p>Concise and memorable. The campaign highlights make your strengths clear.</p>
+                </div>
+            </article>
+        </template>
+    </div>
+</body>
+</html>
