@@ -1,4 +1,4 @@
-CVer is a web application that serves as both a social platform and a personal library for people to expand their horizons in terms of CV creation. 
+er is a web application that serves as both a social platform and a personal library for people to expand their horizons in terms of CV creation. 
 
 CVs today are boring and styling them to your hearts content could attract a specific audience if you know where to look.
 
