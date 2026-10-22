@@ -29,3 +29,5 @@ Styles is a predefined list of vanity both users and admins have access to, mean
 Posts tracks all the posts made by users or admins for easy tracking in case of guideline breaches
 
 Friendships serves as the connecting web between users, both Admin and regular User
+
+TEST CHANGE PR
