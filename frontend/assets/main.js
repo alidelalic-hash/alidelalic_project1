@@ -1,3 +1,4 @@
+(() => {
 const mainApp = document.querySelector(".main-app");
 
 if (mainApp) {
@@ -13,10 +14,10 @@ if (mainApp) {
     const commentsTitle = document.getElementById("comments-drawer-title");
     const commentsPostTitle = document.getElementById("comments-post-title");
     const commentsList = document.getElementById("comments-list");
-    const commentButtons = document.querySelectorAll("[data-open-comments]");
-    const profileLink = document.querySelector(".main-profile-link");
+    const commentButtons = mainApp.querySelectorAll("[data-open-comments]");
+    const profileLink = mainApp.querySelector(".main-profile-link");
     const userStatus = document.getElementById("user-status");
-    const statusChoices = document.querySelectorAll("[data-status-choice]");
+    const statusChoices = mainApp.querySelectorAll("[data-status-choice]");
     const statusNames = {
         available: "Available",
         away: "Away",
@@ -47,7 +48,7 @@ if (mainApp) {
         }
     };
 
-    const mainNavbar = document.querySelector(".main-navbar");
+    const mainNavbar = mainApp.querySelector(".main-navbar");
 
     sidebarToggle.addEventListener("click", () => {
         setSidebarOpen(sidebarToggle.getAttribute("aria-expanded") !== "true");
@@ -142,13 +143,13 @@ if (mainApp) {
         });
     });
 
-    document.addEventListener("click", (event) => {
+    mainApp.addEventListener("click", (event) => {
         if (quickMenu.open && !quickMenu.contains(event.target)) {
             quickMenu.open = false;
         }
     });
 
-    document.addEventListener("keydown", (event) => {
+    mainApp.addEventListener("keydown", (event) => {
         if (event.key === "Tab" && mainApp.classList.contains("comments-open")) {
             const focusableElements = commentsDrawer.querySelectorAll(
                 "button:not([disabled]), a[href], input:not([disabled]), [tabindex]:not([tabindex=\"-1\"])"
@@ -176,7 +177,7 @@ if (mainApp) {
         }
     });
 
-    document.querySelectorAll("[data-post-card]").forEach((postCard) => {
+    mainApp.querySelectorAll("[data-post-card]").forEach((postCard) => {
         const actionButtons = postCard.querySelectorAll("[data-post-action]");
 
         actionButtons.forEach((button) => {
@@ -236,3 +237,4 @@ if (mainApp) {
         });
     });
 }
+})();

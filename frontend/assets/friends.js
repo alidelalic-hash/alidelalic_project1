@@ -1,3 +1,4 @@
+(() => {
 const friendsList = document.getElementById("friends-list");
 
 if (friendsList) {
@@ -84,3 +85,4 @@ if (friendsList) {
 
     updateFriendsCount();
 }
+})();

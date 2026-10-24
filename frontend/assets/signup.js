@@ -1,3 +1,4 @@
+(() => {
 const signupForm = document.getElementById("signup-form");
 
 if (signupForm) {
@@ -143,3 +144,4 @@ if (signupForm) {
 
     showCaptchaChallenge();
 }
+})();
