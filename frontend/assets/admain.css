@@ -1,0 +1,35 @@
+.main-admin-nav-heading {
+    padding: 17px 13px 5px;
+    color: #929daf;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+.main-sidebar-nav {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-admin-tools {
+    margin-top: 34px;
+    scroll-margin-top: 96px;
+}
+
+.main-admin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+
+.main-admin-grid .main-placeholder-card {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 650px) {
+    .main-admin-grid {
+        grid-template-columns: 1fr;
+    }
+}

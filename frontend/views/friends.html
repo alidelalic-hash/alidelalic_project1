@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#334b91">
+    <title>Friends | CV Maker</title>
+    <link rel="stylesheet" href="../assets/friends.css">
+    <script src="../assets/friends.js" defer></script>
+</head>
+<body>
+    <main class="friends-page">
+        <div class="friends-shell">
+            <nav class="friends-nav" aria-label="Main navigation">
+                <a class="friends-brand" href="#/main">
+                    <span class="friends-brand-mark" aria-hidden="true">C</span>
+                    <span>CV Maker</span>
+                </a>
+                <div class="friends-nav-links">
+                    <a href="#/main">Home</a>
+                    <a href="#/profile">Profile</a>
+                    <a href="#/friends" aria-current="page">Friends</a>
+                    <a href="#/login">Sign out</a>
+                </div>
+            </nav>
+
+            <header class="friends-heading">
+                <div>
+                    <p class="friends-eyebrow">Your community</p>
+                    <h1>Friends</h1>
+                    <p class="friends-intro">Keep in touch with people you know and share your work with.</p>
+                </div>
+                <span class="friends-count" id="friends-count">5 friends</span>
+            </header>
+
+            <div class="friends-notice" id="friends-notice" role="status" aria-live="polite" hidden></div>
+
+            <section class="friends-list" id="friends-list" aria-label="Friends list">
+                <article class="friend-card" data-friend-card>
+                    <div class="friend-avatar friend-avatar-blue" aria-hidden="true">JM</div>
+                    <div class="friend-details">
+                        <h2>Jordan Miller</h2>
+                        <p>@jordanmiller <span class="friend-dot" aria-hidden="true"></span> UX Designer</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="friend-button friend-message-button" type="button" data-message-toggle
+                                aria-expanded="false">Message</button>
+                        <button class="friend-button friend-remove-button" type="button" data-remove-friend>Remove</button>
+                        <button class="friend-button friend-report-button" type="button" data-report-friend>Report</button>
+                    </div>
+                    <form class="friend-message-composer" data-message-form hidden>
+                        <label for="message-jordan">Message Jordan</label>
+                        <textarea id="message-jordan" name="message" rows="3" maxlength="500"
+                                  placeholder="Write a message..." required></textarea>
+                        <div class="friend-composer-footer">
+                            <span>Demo only — messages are not delivered.</span>
+                            <button class="friend-button friend-send-button" type="submit">Preview message</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="friend-card" data-friend-card>
+                    <div class="friend-avatar friend-avatar-gold" aria-hidden="true">AK</div>
+                    <div class="friend-details">
+                        <h2>Amara Khan</h2>
+                        <p>@amarakhan <span class="friend-dot" aria-hidden="true"></span> Brand Strategist</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="friend-button friend-message-button" type="button" data-message-toggle
+                                aria-expanded="false">Message</button>
+                        <button class="friend-button friend-remove-button" type="button" data-remove-friend>Remove</button>
+                        <button class="friend-button friend-report-button" type="button" data-report-friend>Report</button>
+                    </div>
+                    <form class="friend-message-composer" data-message-form hidden>
+                        <label for="message-amara">Message Amara</label>
+                        <textarea id="message-amara" name="message" rows="3" maxlength="500"
+                                  placeholder="Write a message..." required></textarea>
+                        <div class="friend-composer-footer">
+                            <span>Demo only — messages are not delivered.</span>
+                            <button class="friend-button friend-send-button" type="submit">Preview message</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="friend-card" data-friend-card>
+                    <div class="friend-avatar friend-avatar-mint" aria-hidden="true">SL</div>
+                    <div class="friend-details">
+                        <h2>Sam Lee</h2>
+                        <p>@samlee <span class="friend-dot" aria-hidden="true"></span> Software Developer</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="friend-button friend-message-button" type="button" data-message-toggle
+                                aria-expanded="false">Message</button>
+                        <button class="friend-button friend-remove-button" type="button" data-remove-friend>Remove</button>
+                        <button class="friend-button friend-report-button" type="button" data-report-friend>Report</button>
+                    </div>
+                    <form class="friend-message-composer" data-message-form hidden>
+                        <label for="message-sam">Message Sam</label>
+                        <textarea id="message-sam" name="message" rows="3" maxlength="500"
+                                  placeholder="Write a message..." required></textarea>
+                        <div class="friend-composer-footer">
+                            <span>Demo only — messages are not delivered.</span>
+                            <button class="friend-button friend-send-button" type="submit">Preview message</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="friend-card" data-friend-card>
+                    <div class="friend-avatar friend-avatar-lilac" aria-hidden="true">TR</div>
+                    <div class="friend-details">
+                        <h2>Taylor Reed</h2>
+                        <p>@taylorreed <span class="friend-dot" aria-hidden="true"></span> Product Designer</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="friend-button friend-message-button" type="button" data-message-toggle
+                                aria-expanded="false">Message</button>
+                        <button class="friend-button friend-remove-button" type="button" data-remove-friend>Remove</button>
+                        <button class="friend-button friend-report-button" type="button" data-report-friend>Report</button>
+                    </div>
+                    <form class="friend-message-composer" data-message-form hidden>
+                        <label for="message-taylor">Message Taylor</label>
+                        <textarea id="message-taylor" name="message" rows="3" maxlength="500"
+                                  placeholder="Write a message..." required></textarea>
+                        <div class="friend-composer-footer">
+                            <span>Demo only — messages are not delivered.</span>
+                            <button class="friend-button friend-send-button" type="submit">Preview message</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="friend-card" data-friend-card>
+                    <div class="friend-avatar friend-avatar-peach" aria-hidden="true">RC</div>
+                    <div class="friend-details">
+                        <h2>Riley Chen</h2>
+                        <p>@rileychen <span class="friend-dot" aria-hidden="true"></span> Marketing Specialist</p>
+                    </div>
+                    <div class="friend-actions">
+                        <button class="friend-button friend-message-button" type="button" data-message-toggle
+                                aria-expanded="false">Message</button>
+                        <button class="friend-button friend-remove-button" type="button" data-remove-friend>Remove</button>
+                        <button class="friend-button friend-report-button" type="button" data-report-friend>Report</button>
+                    </div>
+                    <form class="friend-message-composer" data-message-form hidden>
+                        <label for="message-riley">Message Riley</label>
+                        <textarea id="message-riley" name="message" rows="3" maxlength="500"
+                                  placeholder="Write a message..." required></textarea>
+                        <div class="friend-composer-footer">
+                            <span>Demo only — messages are not delivered.</span>
+                            <button class="friend-button friend-send-button" type="submit">Preview message</button>
+                        </div>
+                    </form>
+                </article>
+            </section>
+
+            <p class="friends-empty-state" id="friends-empty-state" hidden>
+                Your friends list is empty for now.
+            </p>
+            <p class="friends-demo-note">Sample profiles — actions are local demos and are not saved to an account.</p>
+        </div>
+    </main>
+</body>
+</html>

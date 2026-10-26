@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../assets/profile.css">
+</head>
+<body>
+
+<main class="profile-page container-fluid">
+    <div class="profile-shell">
+        <nav class="profile-nav" aria-label="Main navigation">
+            <a class="profile-brand" href="#/main">
+                <span class="profile-brand-mark" aria-hidden="true">C</span>
+                <span>CVer</span>
+            </a>
+            <div class="profile-nav-links">
+                <a class="profile-nav-link" href="#/welcome">App Home</a>
+                <a class="profile-nav-link" href="#/main">Main</a>
+                <a class="profile-nav-link" href="#/friends">Friends</a>
+                <a class="profile-nav-link" href="#/signup">Sign up</a>
+                <a class="profile-nav-link" href="#/login">Log in</a>
+                <a class="profile-nav-link" href="#profile-settings">Settings</a>
+                <a class="profile-nav-link" href="#/profile" aria-current="page">Profile</a>
+            </div>
+        </nav>
+
+        <section class="profile-card" aria-labelledby="profile-name">
+            <div class="profile-banner" aria-hidden="true"></div>
+            <div class="profile-content">
+                <aside class="profile-sidebar">
+                    <div class="profile-avatar-ring">
+                        <img class="profile-avatar" src="../assets/imgs/Home.jpg" alt="Profile picture">
+                    </div>
+
+                    <h1 id="profile-name">Ali Delalić</h1>
+                    <p class="profile-username">ali.delalic@stu.ibu.edu.ba</p>
+
+                    <div class="profile-social-counts" aria-label="Social statistics">
+                        <div class="profile-social-count">
+                            <strong>24</strong><span>Following</span>
+                        </div>
+                        <div class="profile-social-count">
+                            <strong>1.2m</strong><span>Followers</span>
+                        </div>
+                    </div>
+
+                    <section aria-labelledby="profile-bio-heading">
+                        <h2 class="profile-section-title" id="profile-bio-heading">Biography</h2>
+                        <p class="profile-bio">
+                            Expert in Web Development with a taste for horror, as the two are no different.
+                        </p>
+                    </section>
+                </aside>
+
+                <div class="profile-main">
+                    <div class="profile-main-heading">
+                        <h2>Profile overview</h2>
+                        <a class="profile-settings-button" id="profile-settings" href="#profile-settings">
+                            Profile settings
+                        </a>
+                    </div>
+
+                    <nav class="profile-cv-tabs" aria-label="CV collections">
+                        <a class="profile-cv-tab" href="#created-cvs" aria-current="true">
+                            <span>Created CVs</span>
+                            <span class="profile-cv-count">4</span>
+                        </a>
+                        <a class="profile-cv-tab" href="#posted-cvs">
+                            <span>Posted CVs</span>
+                            <span class="profile-cv-count">2</span>
+                        </a>
+                    </nav>
+
+                    <section class="profile-panel" id="created-cvs" aria-labelledby="created-cvs-heading">
+                        <div class="profile-panel-heading">
+                            <h3 id="created-cvs-heading">Created CVs</h3>
+                            <a class="profile-panel-link" href="#created-cvs">View all</a>
+                        </div>
+                        <p class="profile-empty-state">Your created CVs will appear here.</p>
+                    </section>
+
+                    <section class="profile-panel" id="posted-cvs" aria-labelledby="posted-cvs-heading">
+                        <div class="profile-panel-heading">
+                            <h3 id="posted-cvs-heading">Posted CVs</h3>
+                            <a class="profile-panel-link" href="#posted-cvs">View all</a>
+                        </div>
+                        <p class="profile-empty-state">Your posted CVs will appear here.</p>
+                    </section>
+
+                    <section class="profile-panel" aria-labelledby="expertise-heading">
+                        <div class="profile-panel-heading">
+                            <h3 id="expertise-heading">Expertise</h3>
+                        </div>
+                        <ul class="profile-expertise-list">
+                            <li>UX Design</li>
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                            <li>React</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
