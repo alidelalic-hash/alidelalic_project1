@@ -1,0 +1,65 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="../assets/login.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - CVer</title>
+    </head>
+<main class="login-page container-fluid">
+    <section class="login-card row" aria-labelledby="login-title">
+        <div class="login-intro col">
+            <a class="login-brand" href="#/welcome" aria-label="CV Maker home">
+                <span>CVer</span>
+            </a>
+            <div class="login-intro-copy">
+                <p class="login-eyebrow">Your next chapter starts here</p>
+                <h1>Make your experience impossible to miss.</h1>
+                <p>Sign in to create, refine, and share a CV that feels like you.</p>
+            </div>
+            <div class="login-decoration" aria-hidden="true">
+                <span class="login-decoration-line"></span>
+                <span class="login-decoration-dot"></span>
+                <span class="login-decoration-line login-decoration-line-short"></span>
+            </div>
+        </div>
+
+        <div class="login-form-panel col">
+            <div class="login-form-content">
+                <p class="login-mobile-brand">CVer</p>
+                <h2 id="login-title">Welcome back</h2>
+                <p class="login-subtitle">Log back in champ! :D</p>
+
+                <form class="login-form" action="#" method="post">
+                    <div class="login-field">
+                        <label class="form-label" for="login-email">Email</label>
+                        <input class="form-control" id="login-email" name="email" type="email"
+                               autocomplete="email" placeholder="you@example.com">
+                    </div>
+
+                    <div class="login-field">
+                        <div class="login-label-row">
+                            <label class="form-label" for="login-password">Password</label>
+                            <a class="login-text-link" href="#">Forgot password?</a>
+                        </div>
+                        <input class="form-control" id="login-password" name="password" type="password"
+                               autocomplete="current-password" placeholder="Enter your password">
+                    </div>
+
+                    <p class="login-hint">Enter your email and password.</p>
+
+                    <button class="btn btn-primary login-submit" type="submit">Sign in</button>
+                </form>
+
+                <div class="login-divider" aria-hidden="true"><span>or continue with</span></div>
+
+                <button class="btn-login-google" type="button">
+                    <img class="login-google-icon" src="../assets/imgs/Google.webp" alt="google logo" size="20" width="20" height="20" display="inline-block" background-color="red" >
+                    <span>Sign in with Google</span>
+                </button>
+
+                <p class="login-signup">New to CVer? <a class="login-text-link" href="#/signup">Create an account</a></p>
+            </div>
+        </div>
+    </section>
+</main>

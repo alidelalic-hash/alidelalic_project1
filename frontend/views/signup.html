@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#334b91">
+    <title>Create an account | CVer</title>
+    <link rel="stylesheet" href="../assets/signup.css">
+    <script src="../assets/signup.js" defer></script>
+</head>
+<body>
+    <main class="signup-page">
+        <section class="signup-card" aria-labelledby="signup-title">
+            <a class="signup-brand" href="#/main" aria-label="CVer home">
+            <span>CVer</span>
+            </a>
+
+            <header class="signup-heading">
+                <p class="signup-eyebrow">Build your next chapter</p>
+                <h1 id="signup-title">Create your account</h1>
+                <p>Join the community and start creating CVs!</p>
+            </header>
+
+            <form class="signup-form" id="signup-form" novalidate>
+                <div class="signup-field">
+                    <label for="signup-name">Full name <span aria-hidden="true">*</span></label>
+                    <input class="signup-input" id="signup-name" name="name" type="text"
+                           autocomplete="name" minlength="2" maxlength="80" required
+                           aria-describedby="signup-name-error" placeholder="Your full name">
+                    <span class="signup-error" id="signup-name-error" aria-live="polite"></span>
+                </div>
+
+                <div class="signup-field">
+                    <label for="signup-phone">Phone number <span aria-hidden="true">*</span></label>
+                    <input class="signup-input" id="signup-phone" name="phone" type="tel"
+                           autocomplete="tel" inputmode="tel" maxlength="24" required
+                           aria-describedby="signup-phone-hint signup-phone-error"
+                           placeholder="+1 555 123 4567">
+                    <span class="signup-hint" id="signup-phone-hint">Include your country code if applicable.</span>
+                    <span class="signup-error" id="signup-phone-error" aria-live="polite"></span>
+                </div>
+
+                <div class="signup-field">
+                    <label for="signup-email">Email address <span aria-hidden="true">*</span></label>
+                    <input class="signup-input" id="signup-email" name="email" type="email"
+                           autocomplete="email" maxlength="254" required
+                           aria-describedby="signup-email-error" placeholder="you@example.com">
+                    <span class="signup-error" id="signup-email-error" aria-live="polite"></span>
+                </div>
+
+                <div class="signup-field">
+                    <label for="signup-password">Password <span aria-hidden="true">*</span></label>
+                    <input class="signup-input" id="signup-password" name="password" type="password"
+                           autocomplete="new-password" minlength="8" maxlength="128" required
+                           aria-describedby="signup-password-hint signup-password-error"
+                           placeholder="Create a password">
+                    <span class="signup-hint" id="signup-password-hint">At least 8 characters, with a letter and a number.</span>
+                    <span class="signup-error" id="signup-password-error" aria-live="polite"></span>
+                </div>
+
+                <fieldset class="signup-captcha">
+                    <legend>Human verification <span aria-hidden="true">*</span></legend>
+                    <p class="signup-captcha-copy">Solve the quick check to verify before signing up.</p>
+                    <div class="signup-captcha-challenge">
+                        <span class="signup-captcha-question" id="captcha-question" aria-live="polite"></span>
+                        <button class="signup-captcha-refresh" id="captcha-refresh" type="button">
+                            New question
+                        </button>
+                    </div>
+                    <label class="signup-captcha-label" for="captcha-answer">Your answer <span aria-hidden="true">*</span></label>
+                    <input class="signup-input" id="captcha-answer" name="captcha" type="text"
+                           inputmode="numeric" autocomplete="off" required
+                           aria-describedby="captcha-error" placeholder="Enter the answer">
+                    <span class="signup-error" id="captcha-error" aria-live="polite"></span>
+                </fieldset>
+
+                <button class="signup-submit" type="submit">Create account</button>
+                <p class="signup-notice" id="signup-notice" role="status" aria-live="polite" hidden></p>
+            </form>
+
+            <p class="signup-login">Already have an account? <a href="#/login">Sign in</a></p>
+            <p class="signup-demo-note">This signup form is a frontend demo; account creation is not connected yet.</p>
+        </section>
+    </main>
+</body>
+</html>
