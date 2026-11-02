@@ -38,4 +38,4 @@
 - **Task:** Refactor the frontend project from a multi-page application (MPA) into a single-page application (SPA).
 - **Main prompt:** “refactor my project to be a SPA since we now have a MPA. dont make any excessive changes to the point it would cause damage. work exclusively in the frontend and make necessary changes without going beyond what you were told”
 - **Generated:** Most of the frontend code was overridden to support the SPA.
-- **Kept/changed:** Everything was kept.
+- **Kept/changed:** Everything was kept..
